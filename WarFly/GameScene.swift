@@ -28,18 +28,13 @@ class GameScene: SKScene {
         
         let screen = UIScreen.main.bounds
         
-        for _ in 1...5 {
-            
-            let x: CGFloat = CGFloat(GKRandomSource.sharedRandom().nextInt(upperBound: Int(screen.size.width)))
-            let y: CGFloat = CGFloat(GKRandomSource.sharedRandom().nextInt(upperBound: Int(screen.size.height)))
-            
-            let island = Island.populateSprite(at: CGPoint(x: x, y: y))
-            self.addChild(island)
-            
-            let cloud = Cloud.populateSprite(at: CGPoint(x: x, y: y))
-            self.addChild(cloud)
-            
-        }
+        let island1 = Island.populate()
+        island1.position = CGPoint(x: 100, y: 200)
+        self.addChild(island1)
+        
+        let island2 = Island.populate()
+        island2.position = CGPoint(x: self.size.width - 100, y: self.size.height - 200)
+        self.addChild(island2)
         
         player = PlayerPlane.populate(at: CGPoint(x: screen.size.width / 2, y: 100))
         self.addChild(player)
