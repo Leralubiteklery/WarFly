@@ -10,14 +10,14 @@ import GameplayKit
 
 final class Island: SKSpriteNode, GameBackgroundSpritable {
     
-    static func populateSprite(at point: CGPoint) -> Island {
+    static func populate() -> Island {
         let islandName = configureName()
         let island = Island(imageNamed: islandName)
         island.setScale(randomScaleFactor)
-        island.position = point
+        island.position = randomPoint()
         island.zPosition = 1
         island.run(rotateForRandomAngle())
-        island.run(move(from: point))
+        island.run(move(from: island.position))
         
         return island
     }
