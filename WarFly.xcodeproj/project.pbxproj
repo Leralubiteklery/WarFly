@@ -18,6 +18,7 @@
 		ED9F16522CA0175000949B40 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16512CA0175000949B40 /* Cloud.swift */; };
 		ED9F16542CA1517E00949B40 /* PlayerPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16532CA1517E00949B40 /* PlayerPlane.swift */; };
 		ED9F16562CA1534100949B40 /* PlayerPlane.atlas in Resources */ = {isa = PBXBuildFile; fileRef = ED9F16552CA1534100949B40 /* PlayerPlane.atlas */; };
+		ED9F16582CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16572CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		ED9F16512CA0175000949B40 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		ED9F16532CA1517E00949B40 /* PlayerPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlane.swift; sourceTree = "<group>"; };
 		ED9F16552CA1534100949B40 /* PlayerPlane.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerPlane.atlas; sourceTree = "<group>"; };
+		ED9F16572CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protocol GameBackgroindSprotable + Extansion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				ED9F16512CA0175000949B40 /* Cloud.swift */,
 				ED9F16532CA1517E00949B40 /* PlayerPlane.swift */,
 				ED9F16552CA1534100949B40 /* PlayerPlane.atlas */,
+				ED9F16572CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift */,
 			);
 			path = WarFly;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				ED9F163D2C9B210200949B40 /* GameScene.swift in Sources */,
 				ED9F16542CA1517E00949B40 /* PlayerPlane.swift in Sources */,
+				ED9F16582CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift in Sources */,
 				ED9F16522CA0175000949B40 /* Cloud.swift in Sources */,
 				ED9F163F2C9B210200949B40 /* GameViewController.swift in Sources */,
 				ED9F16372C9B210200949B40 /* AppDelegate.swift in Sources */,
