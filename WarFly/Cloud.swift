@@ -54,7 +54,7 @@ final class Cloud: SKSpriteNode, GameBackgroundSpritable {
     fileprivate static func move(from point: CGPoint) -> SKAction {
         let movePoint = CGPoint(x: point.x, y: -200)
         let moveDistance = point.y + 200
-        let movementSpeed: CGFloat = 15.0
+        let movementSpeed: CGFloat = 150.0
         let duration = moveDistance / movementSpeed
         return SKAction.move(to: movePoint, duration: duration)
     }

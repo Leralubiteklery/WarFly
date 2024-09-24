@@ -28,12 +28,10 @@ class GameScene: SKScene {
         
         let screen = UIScreen.main.bounds
         
-        let island1 = Island.populate()
-        island1.position = CGPoint(x: 100, y: 200)
+        let island1 = Island.populate(at: CGPoint(x: 100, y: 200))
         self.addChild(island1)
         
-        let island2 = Island.populate()
-        island2.position = CGPoint(x: self.size.width - 100, y: self.size.height - 200)
+        let island2 = Island.populate(at: CGPoint(x: self.size.width - 100, y: self.size.height - 200))
         self.addChild(island2)
         
         player = PlayerPlane.populate(at: CGPoint(x: screen.size.width / 2, y: 100))
