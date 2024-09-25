@@ -71,14 +71,14 @@
 				ED9F163C2C9B210200949B40 /* GameScene.swift */,
 				ED9F163E2C9B210200949B40 /* GameViewController.swift */,
 				ED9F164F2C9C43EB00949B40 /* Island.swift */,
+				ED9F16512CA0175000949B40 /* Cloud.swift */,
+				ED9F16572CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift */,
 				ED9F16402C9B210200949B40 /* Main.storyboard */,
 				ED9F16432C9B210300949B40 /* Assets.xcassets */,
 				ED9F16452C9B210300949B40 /* LaunchScreen.storyboard */,
 				ED9F164D2C9C1F0E00949B40 /* Background.swift */,
-				ED9F16512CA0175000949B40 /* Cloud.swift */,
 				ED9F16532CA1517E00949B40 /* PlayerPlane.swift */,
 				ED9F16552CA1534100949B40 /* PlayerPlane.atlas */,
-				ED9F16572CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift */,
 			);
 			path = WarFly;
 			sourceTree = "<group>";
