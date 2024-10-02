@@ -64,20 +64,20 @@ class PlayerPlane: SKSpriteNode {
     
     fileprivate func preloadTextureArrays() {
         for i in 0...2 {
-            self.preloadArray(_stride: animationSpriteStrides[i]) { [unowned self] array in
+            self.preloadArray(_stride: animationSpriteStrides[i], callback: { [unowned self] array in
                 switch i {
                 case 0: self.leftTextureArrayAnimation = array
                 case 1: self.rightTextureArrayAnimation = array
                 case 2: self.forwardTextureArrayAnimation = array
                 default: break
                 }
-            }
+            })
         }
     }
     
     fileprivate func preloadArray(_stride: (Int, Int, Int), callback: @escaping (_ array: [SKTexture]) -> ()) {
         var array = [SKTexture]()
-        for i in stride(from: _stride.0, to: _stride.1, by: _stride.2) {
+        for i in stride(from: _stride.0, through: _stride.1, by: _stride.2) {
             let number = String(format: "%02d", i)
             let texture = SKTexture(imageNamed: "airplane_3ver2_\(number)")
             array.append(texture)
