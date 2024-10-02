@@ -56,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				ED9F16352C9B210200949B40 /* WarFly */,
-				ED9F165D2CAD2F9200949B40 /* GreenPowerUp.atlas */,
 				ED9F16342C9B210200949B40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +82,7 @@
 				ED9F16452C9B210300949B40 /* LaunchScreen.storyboard */,
 				ED9F164D2C9C1F0E00949B40 /* Background.swift */,
 				ED9F16532CA1517E00949B40 /* PlayerPlane.swift */,
+				ED9F165D2CAD2F9200949B40 /* GreenPowerUp.atlas */,
 				ED9F16552CA1534100949B40 /* PlayerPlane.atlas */,
 				ED9F16592CAC203E00949B40 /* PowerUp.swift */,
 			);
