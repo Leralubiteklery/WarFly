@@ -22,19 +22,32 @@ class GameScene: SKScene {
         DispatchQueue.main.asyncAfter(deadline: deadline) { [unowned self] in
             self.player.performFly()
         }
-        
+        spawnEnemy(count: 5)
+     }
+    
+    fileprivate func spawnEnemy(count: Int) {
+        let enemyTextureAtlas = SKTextureAtlas(named: "Enemy_1")
+        SKTextureAtlas.preloadTextureAtlases([enemyTextureAtlas]) {
+            Enemy.textureAtlas = enemyTextureAtlas
+            let waitAction = SKAction.wait(forDuration: 1.0)
+            let spawnEnemy = SKAction.run( {
+                let enemy = Enemy()
+                enemy.position = CGPoint(x: self.size.width / 2, y: self.size.height + 110)
+                self.addChild(enemy)
+                enemy.flySpiral()
+            })
+            
+            let spawnAction = SKAction.sequence([waitAction, spawnEnemy])
+            let repeatAction = SKAction.repeat(spawnAction, count: count)
+            self.run(repeatAction)
+        }
+    }
+    
+    fileprivate func spawnPowerUp() {
         let powerUp = PowerUp()
         powerUp.performRotation()
         powerUp.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
         self.addChild(powerUp)
-        
-        let enemyTextureAtlas = SKTextureAtlas(named: "Enemy_1")
-        SKTextureAtlas.preloadTextureAtlases([enemyTextureAtlas]) {
-            Enemy.textureAtlas = enemyTextureAtlas
-            let enemy = Enemy()
-            enemy.position = CGPoint(x: self.size.width / 2, y: self.size.height * 2 / 3)
-            self.addChild(enemy)            
-        }
         
     }
     
@@ -88,10 +101,9 @@ class GameScene: SKScene {
     }
     
     override func didSimulatePhysics() {
-        
         player.checkPosition()
-        enumerateChildNodes(withName: "backgroundSprite") { node, stop in
-            if node.position.y < -199 {
+        enumerateChildNodes(withName: "sprite") { node, stop in
+            if node.position.y < -100 {
                 node.removeFromParent()
             }
         }
