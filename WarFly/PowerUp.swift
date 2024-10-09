@@ -10,12 +10,15 @@ import SpriteKit
 
 class PowerUp: SKSpriteNode {
     let initialSize = CGSize(width: 52, height: 52)
-    let textureAtlas = SKTextureAtlas(named: "GreenPowerUp")
+    let textureAtlas: SKTextureAtlas!
+    var textureNameBeginsWith = ""
     var animationSpriteArray = [SKTexture]()
     
-    init() {
-        let greenTexture = textureAtlas.textureNamed("missle_green_01")
-        super.init(texture: greenTexture, color: .clear, size: initialSize)
+    init(textureAtlas: SKTextureAtlas) {
+        self.textureAtlas = textureAtlas
+        let textureName = textureAtlas.textureNames.sorted()[0]
+        let texture = textureAtlas.textureNamed(textureName)
+        super.init(texture: texture, color: .clear, size: initialSize)
         self.name = "powerUp"
         self.zPosition = 20
     }

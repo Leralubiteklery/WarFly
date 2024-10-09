@@ -24,6 +24,7 @@
 		ED9F16A62CAE8D3300949B40 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16A52CAE8D3300949B40 /* Enemy.swift */; };
 		ED9F16A82CAE8DA900949B40 /* Enemy_1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = ED9F16A72CAE8DA900949B40 /* Enemy_1.atlas */; };
 		ED9F16AE2CB5380200949B40 /* Enemy_2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = ED9F16AD2CB5380200949B40 /* Enemy_2.atlas */; };
+		ED9F16B02CB6965600949B40 /* BluePowerUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = ED9F16AF2CB6965600949B40 /* BluePowerUp.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		ED9F16A52CAE8D3300949B40 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		ED9F16A72CAE8DA900949B40 /* Enemy_1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy_1.atlas; sourceTree = "<group>"; };
 		ED9F16AD2CB5380200949B40 /* Enemy_2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy_2.atlas; sourceTree = "<group>"; };
+		ED9F16AF2CB6965600949B40 /* BluePowerUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BluePowerUp.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +91,10 @@
 				ED9F164D2C9C1F0E00949B40 /* Background.swift */,
 				ED9F16592CAC203E00949B40 /* PowerUp.swift */,
 				ED9F16532CA1517E00949B40 /* PlayerPlane.swift */,
+				ED9F16A52CAE8D3300949B40 /* Enemy.swift */,
+				ED9F16AF2CB6965600949B40 /* BluePowerUp.atlas */,
 				ED9F165D2CAD2F9200949B40 /* GreenPowerUp.atlas */,
 				ED9F16552CA1534100949B40 /* PlayerPlane.atlas */,
-				ED9F16A52CAE8D3300949B40 /* Enemy.swift */,
 				ED9F16AD2CB5380200949B40 /* Enemy_2.atlas */,
 				ED9F16A72CAE8DA900949B40 /* Enemy_1.atlas */,
 			);
@@ -162,6 +165,7 @@
 				ED9F165E2CAD2F9200949B40 /* GreenPowerUp.atlas in Resources */,
 				ED9F16562CA1534100949B40 /* PlayerPlane.atlas in Resources */,
 				ED9F16442C9B210300949B40 /* Assets.xcassets in Resources */,
+				ED9F16B02CB6965600949B40 /* BluePowerUp.atlas in Resources */,
 				ED9F16472C9B210300949B40 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
