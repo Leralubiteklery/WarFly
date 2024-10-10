@@ -18,19 +18,17 @@ class PowerUp: SKSpriteNode {
         self.textureAtlas = textureAtlas
         let textureName = textureAtlas.textureNames.sorted()[0]
         let texture = textureAtlas.textureNamed(textureName)
+        textureNameBeginsWith = String(textureName.dropLast(6)) // 01.png
         super.init(texture: texture, color: .clear, size: initialSize)
+        self.setScale(0.7)
         self.name = "powerUp"
         self.zPosition = 20
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func performRotation() {
         for i in 1...15 {
             let number = String(format: "%02d", i)
-            animationSpriteArray.append(SKTexture(imageNamed: "missle_green_\(number)"))
+            animationSpriteArray.append(SKTexture(imageNamed: textureNameBeginsWith + number.description))
         }
         
         SKTexture.preload(animationSpriteArray) {
@@ -38,6 +36,10 @@ class PowerUp: SKSpriteNode {
             let rotationForever = SKAction.repeatForever(rotation)
             self.run(rotationForever)
         }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
