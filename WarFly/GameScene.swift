@@ -9,11 +9,14 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
-class GameScene: SKScene {
+class GameScene: SKScene{
     
     var player: PlayerPlane!
     
     override func didMove(to view: SKView) {
+        
+        physicsWorld.contactDelegate = self
+        physicsWorld.gravity = CGVector.zero
         
         configureStartScene()
         spawnClouds()
@@ -152,5 +155,15 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         playerFire()
+    }
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) {
+        print("contact detected")
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        
     }
 }
