@@ -1,15 +1,16 @@
 //
-//  GreenpowerUp.swift
+//  YellowShot.swift
 //  WarFly
 //
-//  Created by Lera Savchenko on 10.10.24.
+//  Created by Lera Savchenko on 12.10.24.
 //
 
 import SpriteKit
 
-class GreenPowerUp: PowerUp {
+class YellowShot: Shot {
+    
     init() {
-        let textureAtlas = SKTextureAtlas(named: "GreenPowerUp")
+        let textureAtlas = Assets.shared.yellowAmmoAtlas
         super.init(textureAtlas: textureAtlas)
     }
     
