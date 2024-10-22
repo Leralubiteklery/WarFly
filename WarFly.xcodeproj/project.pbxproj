@@ -98,27 +98,12 @@
 		ED9F16352C9B210200949B40 /* WarFly */ = {
 			isa = PBXGroup;
 			children = (
-				ED9F16362C9B210200949B40 /* AppDelegate.swift */,
-				ED9F16C12CBE890E00949B40 /* BitMaskCategory.swift */,
-				ED9F163C2C9B210200949B40 /* GameScene.swift */,
-				ED9F163E2C9B210200949B40 /* GameViewController.swift */,
-				ED9F16B12CB7DCBF00949B40 /* BluePowerUp.swift */,
-				ED9F164F2C9C43EB00949B40 /* Island.swift */,
-				ED9F16512CA0175000949B40 /* Cloud.swift */,
-				ED9F16572CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift */,
-				ED9F164D2C9C1F0E00949B40 /* Background.swift */,
-				ED9F16592CAC203E00949B40 /* PowerUp.swift */,
-				ED9F16532CA1517E00949B40 /* PlayerPlane.swift */,
-				ED9F16A52CAE8D3300949B40 /* Enemy.swift */,
-				ED9F16B32CB7DCF400949B40 /* GreenPowerUp.swift */,
-				ED9F16B72CBA6A8700949B40 /* Shot.swift */,
-				ED9F16D22CC7B13000949B40 /* HUD.swift */,
-				ED9F16BD2CBD46A800949B40 /* Assets.swift */,
-				ED9F16B92CBA71AF00949B40 /* YellowShot.swift */,
-				ED9F16BF2CBE5A5A00949B40 /* MenuScene.swift */,
-				ED9F16452C9B210300949B40 /* LaunchScreen.storyboard */,
-				ED9F16402C9B210200949B40 /* Main.storyboard */,
-				ED9F16432C9B210300949B40 /* Assets.xcassets */,
+				ED9F16D82CC7B4A200949B40 /* Managers */,
+				ED9F16D92CC7B4AD00949B40 /* Scenes */,
+				ED9F16D52CC7B43600949B40 /* Controllers */,
+				ED9F16D72CC7B49500949B40 /* Classes */,
+				ED9F16D62CC7B44500949B40 /* Protocols + Extensions */,
+				ED9F16D42CC7B42100949B40 /* Supporting files */,
 				ED9F16B62CBA6A5300949B40 /* Atlases */,
 			);
 			path = WarFly;
@@ -136,6 +121,69 @@
 				ED9F16A72CAE8DA900949B40 /* Enemy_1.atlas */,
 			);
 			path = Atlases;
+			sourceTree = "<group>";
+		};
+		ED9F16D42CC7B42100949B40 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				ED9F16362C9B210200949B40 /* AppDelegate.swift */,
+				ED9F16452C9B210300949B40 /* LaunchScreen.storyboard */,
+				ED9F16402C9B210200949B40 /* Main.storyboard */,
+				ED9F16432C9B210300949B40 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		ED9F16D52CC7B43600949B40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED9F163E2C9B210200949B40 /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ED9F16D62CC7B44500949B40 /* Protocols + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED9F16572CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift */,
+			);
+			path = "Protocols + Extensions";
+			sourceTree = "<group>";
+		};
+		ED9F16D72CC7B49500949B40 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ED9F16B12CB7DCBF00949B40 /* BluePowerUp.swift */,
+				ED9F164F2C9C43EB00949B40 /* Island.swift */,
+				ED9F16512CA0175000949B40 /* Cloud.swift */,
+				ED9F164D2C9C1F0E00949B40 /* Background.swift */,
+				ED9F16592CAC203E00949B40 /* PowerUp.swift */,
+				ED9F16532CA1517E00949B40 /* PlayerPlane.swift */,
+				ED9F16A52CAE8D3300949B40 /* Enemy.swift */,
+				ED9F16B32CB7DCF400949B40 /* GreenPowerUp.swift */,
+				ED9F16B72CBA6A8700949B40 /* Shot.swift */,
+				ED9F16D22CC7B13000949B40 /* HUD.swift */,
+				ED9F16B92CBA71AF00949B40 /* YellowShot.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ED9F16D82CC7B4A200949B40 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				ED9F16C12CBE890E00949B40 /* BitMaskCategory.swift */,
+				ED9F16BD2CBD46A800949B40 /* Assets.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		ED9F16D92CC7B4AD00949B40 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				ED9F163C2C9B210200949B40 /* GameScene.swift */,
+				ED9F16BF2CBE5A5A00949B40 /* MenuScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
