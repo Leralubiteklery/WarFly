@@ -25,6 +25,18 @@ class MenuScene: SKScene {
         button1.name = "play"
         button1.label.name = "play"
         addChild(button1)
+        
+        let button2 = ButtonNode(titled: "options", backgroundName: "button_background")
+        button2.position = CGPoint(x: self.frame.midX, y: self.frame.midY - 100)
+        button2.name = "options"
+        button2.label.name = "options"
+        addChild(button2)
+        
+        let button3 = ButtonNode(titled: "best", backgroundName: "button_background")
+        button3.position = CGPoint(x: self.frame.midX, y: self.frame.midY - 200)
+        button3.name = "best"
+        button3.label.name = "best"
+        addChild(button3)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
