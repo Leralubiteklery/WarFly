@@ -35,6 +35,7 @@
 		ED9F16C22CBE890E00949B40 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16C12CBE890E00949B40 /* BitMaskCategory.swift */; };
 		ED9F16D32CC7B13000949B40 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16D22CC7B13000949B40 /* HUD.swift */; };
 		ED9F16DB2CC8E22400949B40 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16DA2CC8E22400949B40 /* ButtonNode.swift */; };
+		ED9F16DD2CCA84C300949B40 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16DC2CCA84C300949B40 /* PauseScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		ED9F16C12CBE890E00949B40 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
 		ED9F16D22CC7B13000949B40 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		ED9F16DA2CC8E22400949B40 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		ED9F16DC2CCA84C300949B40 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			children = (
 				ED9F163C2C9B210200949B40 /* GameScene.swift */,
 				ED9F16BF2CBE5A5A00949B40 /* MenuScene.swift */,
+				ED9F16DC2CCA84C300949B40 /* PauseScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				ED9F165A2CAC203E00949B40 /* PowerUp.swift in Sources */,
 				ED9F16C22CBE890E00949B40 /* BitMaskCategory.swift in Sources */,
 				ED9F16C02CBE5A5A00949B40 /* MenuScene.swift in Sources */,
+				ED9F16DD2CCA84C300949B40 /* PauseScene.swift in Sources */,
 				ED9F16D32CC7B13000949B40 /* HUD.swift in Sources */,
 				ED9F16B82CBA6A8700949B40 /* Shot.swift in Sources */,
 				ED9F164E2C9C1F0E00949B40 /* Background.swift in Sources */,
