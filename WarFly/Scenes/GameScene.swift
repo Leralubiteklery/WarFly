@@ -11,12 +11,19 @@ import CoreMotion
 
 class GameScene: SKScene{
     
+    let sceneManager = SceneManager.shared
+    
     fileprivate var player: PlayerPlane!
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size
     
     
     override func didMove(to view: SKView) {
+        
+        // checking if scene exists
+        guard sceneManager.gameScene == nil else { return }
+        
+        sceneManager.gameScene = self
         
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector.zero

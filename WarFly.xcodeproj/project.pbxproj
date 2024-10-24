@@ -36,6 +36,7 @@
 		ED9F16D32CC7B13000949B40 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16D22CC7B13000949B40 /* HUD.swift */; };
 		ED9F16DB2CC8E22400949B40 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16DA2CC8E22400949B40 /* ButtonNode.swift */; };
 		ED9F16DD2CCA84C300949B40 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16DC2CCA84C300949B40 /* PauseScene.swift */; };
+		ED9F16DF2CCA91C500949B40 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16DE2CCA91C500949B40 /* SceneManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		ED9F16D22CC7B13000949B40 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		ED9F16DA2CC8E22400949B40 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		ED9F16DC2CCA84C300949B40 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
+		ED9F16DE2CCA91C500949B40 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				ED9F16C12CBE890E00949B40 /* BitMaskCategory.swift */,
 				ED9F16BD2CBD46A800949B40 /* Assets.swift */,
+				ED9F16DE2CCA91C500949B40 /* SceneManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				ED9F163F2C9B210200949B40 /* GameViewController.swift in Sources */,
 				ED9F16BE2CBD46A800949B40 /* Assets.swift in Sources */,
 				ED9F16372C9B210200949B40 /* AppDelegate.swift in Sources */,
+				ED9F16DF2CCA91C500949B40 /* SceneManager.swift in Sources */,
 				ED9F16A62CAE8D3300949B40 /* Enemy.swift in Sources */,
 				ED9F16502C9C43EB00949B40 /* Island.swift in Sources */,
 				ED9F165A2CAC203E00949B40 /* PowerUp.swift in Sources */,
