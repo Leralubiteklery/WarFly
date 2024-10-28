@@ -9,21 +9,32 @@ import SpriteKit
 
 class BestScene: ParentScene {
     
+    var ratings = [10, 100, 10000]
+    
     override func didMove(to view: SKView) {
         
-        setHeader(withName: "best score", andBackground: "header_background")
+        setHeader(withName: "best", andBackground: "header_background")
         
-        let bestScore = ButtonNode(titled: nil, backgroundName: "scores")
-        bestScore.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        bestScore.name = "best score"
-        bestScore.label.name = "best score"
-        addChild(bestScore)
+        let titles = ["back"]
         
-        let back = ButtonNode(titled: "back", backgroundName: "button_background")
-        back.position = CGPoint(x: self.frame.midX, y: self.frame.midY - 100)
-        back.name = "back"
-        back.label.name = "back"
-        addChild(back)
+        for (index, title) in titles.enumerated() {
+            let button = ButtonNode(titled: title, backgroundName: "button_background")
+            button.position = CGPoint(x: self.frame.midX, y: self.frame.midY - 200 + CGFloat(100 * index))
+            button.name = title
+            button.label.name = title
+            addChild(button)
+        }
+        
+        let topRatings = ratings.sorted() { $0 > $1 }.prefix(3)
+        for (index, value) in topRatings.enumerated() {
+            let l = SKLabelNode(text: value.description)
+            
+            l.fontColor = UIColor(red: 219/255, green: 226/255, blue: 215/255, alpha: 1.0)
+            l.fontName = "AmericanTypewriter-Bold"
+            l.fontSize = 30
+            l.position = CGPoint(x: self.frame.midX, y: self.frame.midY - CGFloat(index * 60))
+            addChild(l)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
