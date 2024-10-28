@@ -37,6 +37,9 @@
 		ED9F16DB2CC8E22400949B40 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16DA2CC8E22400949B40 /* ButtonNode.swift */; };
 		ED9F16DD2CCA84C300949B40 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16DC2CCA84C300949B40 /* PauseScene.swift */; };
 		ED9F16DF2CCA91C500949B40 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16DE2CCA91C500949B40 /* SceneManager.swift */; };
+		ED9F16E12CCF6F7F00949B40 /* ParentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16E02CCF6F7F00949B40 /* ParentScene.swift */; };
+		ED9F16E32CCF73A100949B40 /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16E22CCF73A100949B40 /* OptionsScene.swift */; };
+		ED9F16E52CCF786500949B40 /* BestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16E42CCF786500949B40 /* BestScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		ED9F16DA2CC8E22400949B40 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		ED9F16DC2CCA84C300949B40 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
 		ED9F16DE2CCA91C500949B40 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		ED9F16E02CCF6F7F00949B40 /* ParentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScene.swift; sourceTree = "<group>"; };
+		ED9F16E22CCF73A100949B40 /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
+		ED9F16E42CCF786500949B40 /* BestScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,9 @@
 				ED9F163C2C9B210200949B40 /* GameScene.swift */,
 				ED9F16BF2CBE5A5A00949B40 /* MenuScene.swift */,
 				ED9F16DC2CCA84C300949B40 /* PauseScene.swift */,
+				ED9F16E02CCF6F7F00949B40 /* ParentScene.swift */,
+				ED9F16E22CCF73A100949B40 /* OptionsScene.swift */,
+				ED9F16E42CCF786500949B40 /* BestScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -286,13 +295,16 @@
 				ED9F16A62CAE8D3300949B40 /* Enemy.swift in Sources */,
 				ED9F16502C9C43EB00949B40 /* Island.swift in Sources */,
 				ED9F165A2CAC203E00949B40 /* PowerUp.swift in Sources */,
+				ED9F16E52CCF786500949B40 /* BestScene.swift in Sources */,
 				ED9F16C22CBE890E00949B40 /* BitMaskCategory.swift in Sources */,
 				ED9F16C02CBE5A5A00949B40 /* MenuScene.swift in Sources */,
+				ED9F16E12CCF6F7F00949B40 /* ParentScene.swift in Sources */,
 				ED9F16DD2CCA84C300949B40 /* PauseScene.swift in Sources */,
 				ED9F16D32CC7B13000949B40 /* HUD.swift in Sources */,
 				ED9F16B82CBA6A8700949B40 /* Shot.swift in Sources */,
 				ED9F164E2C9C1F0E00949B40 /* Background.swift in Sources */,
 				ED9F16DB2CC8E22400949B40 /* ButtonNode.swift in Sources */,
+				ED9F16E32CCF73A100949B40 /* OptionsScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
