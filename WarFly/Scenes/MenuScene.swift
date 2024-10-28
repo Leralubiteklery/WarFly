@@ -14,7 +14,6 @@ class MenuScene: ParentScene {
             Assets.shared.preloadAssets()
             Assets.shared.isLoaded = true
         }
-        self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 0.1)
         setHeader(withName: nil, andBackground: "header1")
         
         let titles = ["play", "options", "best"]
