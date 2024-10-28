@@ -33,12 +33,12 @@ class GameScene: ParentScene {
         spawnIslands()
         
         self.player.performFly()
-    
+        
         spawnPowerUp()
         spawnEnemies()
         
         createHUD()
-     }
+    }
     
     fileprivate func createHUD() {
         addChild(hud)
@@ -64,7 +64,7 @@ class GameScene: ParentScene {
             let textureAtlas = arrayOfAtlases[randomNumber]
             
             let waitAction = SKAction.wait(forDuration: 1.0)
-            let spawnEnemy = SKAction.run( { [unowned self] in 
+            let spawnEnemy = SKAction.run( { [unowned self] in
                 let textureNames = textureAtlas.textureNames.sorted()
                 let texture = textureAtlas.textureNamed(textureNames[12])
                 let enemy = Enemy(enemyTexture: texture)
@@ -190,30 +190,50 @@ extension GameScene: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         
+        let explosion = SKEmitterNode(fileNamed: "EnemyExplosion")
+        let contactPoint = contact.contactPoint
+        explosion?.position = contactPoint
+        let waitForExplosionAction = SKAction.wait(forDuration: 1.0)
+        
         let contactCategory: BitMaskCategory = [contact.bodyA.category, contact.bodyB.category]
         switch contactCategory {
         case [.enemy, .player]: print("player vs enemy")
+            if contact.bodyA.node?.name == "sprite" {
+                contact.bodyA.node?.removeFromParent()
+            } else {
+                contact.bodyB.node?.removeFromParent()
+            }
+            addChild(explosion!)
+            self.run(waitForExplosionAction) {
+                explosion?.removeFromParent()
+            }
         case [.powerUp, .player]: print("player vs powerUp")
         case [.enemy, .shot]: print("enemy vs shot")
+            contact.bodyA.node?.removeFromParent()
+            contact.bodyB.node?.removeFromParent()
+            addChild(explosion!)
+            self.run(waitForExplosionAction) {
+                explosion?.removeFromParent()
+            }
         default: preconditionFailure("Unable to detect collision category")
         }
-       
-       /* let bodyA = contact.bodyA.categoryBitMask
-        let bodyB = contact.bodyB.categoryBitMask
-        let player = BitMaskCategory.player
-        let enemy = BitMaskCategory.enemy
-        let shot = BitMaskCategory.shot
-        let powerUp = BitMaskCategory.powerUp
         
-        if bodyA == player && bodyB == enemy || bodyB == player && bodyA == enemy {
-            print("player vs enemy")
-        } else  if bodyA == player && bodyB == powerUp || bodyB == player && bodyA == powerUp {
-            print("player vs powerUp")
-        } else if bodyA == shot && bodyB == enemy || bodyB == shot && bodyA == enemy {
-            print("enemy vs shot")
-        } */
+        /* let bodyA = contact.bodyA.categoryBitMask
+         let bodyB = contact.bodyB.categoryBitMask
+         let player = BitMaskCategory.player
+         let enemy = BitMaskCategory.enemy
+         let shot = BitMaskCategory.shot
+         let powerUp = BitMaskCategory.powerUp
+         
+         if bodyA == player && bodyB == enemy || bodyB == player && bodyA == enemy {
+         print("player vs enemy")
+         } else  if bodyA == player && bodyB == powerUp || bodyB == player && bodyA == powerUp {
+         print("player vs powerUp")
+         } else if bodyA == shot && bodyB == enemy || bodyB == shot && bodyA == enemy {
+         print("enemy vs shot")
+         } */
     }
-
+    
     func didEnd(_ contact: SKPhysicsContact) {
         
     }
