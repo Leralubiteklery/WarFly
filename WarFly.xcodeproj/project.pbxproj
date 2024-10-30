@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED9A1CC72CD26D7D0003245D /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A1CC62CD26D7D0003245D /* GameOverScene.swift */; };
 		ED9F16372C9B210200949B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16362C9B210200949B40 /* AppDelegate.swift */; };
 		ED9F163D2C9B210200949B40 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F163C2C9B210200949B40 /* GameScene.swift */; };
 		ED9F163F2C9B210200949B40 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F163E2C9B210200949B40 /* GameViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED9A1CC62CD26D7D0003245D /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		ED9F16332C9B210200949B40 /* WarFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9F16362C9B210200949B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED9F163C2C9B210200949B40 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		ED9F16E22CCF73A100949B40 /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
 		ED9F16E42CCF786500949B40 /* BestScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScene.swift; sourceTree = "<group>"; };
 		ED9F16E62CCF85FF00949B40 /* EnemyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EnemyExplosion.sks; sourceTree = "<group>"; };
-		ED9F16E72CCF85FF00949B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED9F16E72CCF85FF00949B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Scenes/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		ED9F16D42CC7B42100949B40 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				ED9F16E72CCF85FF00949B40 /* Assets.xcassets */,
 				ED9F16362C9B210200949B40 /* AppDelegate.swift */,
 				ED9F16452C9B210300949B40 /* LaunchScreen.storyboard */,
 				ED9F16402C9B210200949B40 /* Main.storyboard */,
@@ -200,12 +203,12 @@
 			isa = PBXGroup;
 			children = (
 				ED9F163C2C9B210200949B40 /* GameScene.swift */,
-				ED9F16E72CCF85FF00949B40 /* Assets.xcassets */,
 				ED9F16BF2CBE5A5A00949B40 /* MenuScene.swift */,
 				ED9F16DC2CCA84C300949B40 /* PauseScene.swift */,
 				ED9F16E02CCF6F7F00949B40 /* ParentScene.swift */,
 				ED9F16E22CCF73A100949B40 /* OptionsScene.swift */,
 				ED9F16E42CCF786500949B40 /* BestScene.swift */,
+				ED9A1CC62CD26D7D0003245D /* GameOverScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				ED9F163F2C9B210200949B40 /* GameViewController.swift in Sources */,
 				ED9F16BE2CBD46A800949B40 /* Assets.swift in Sources */,
 				ED9F16372C9B210200949B40 /* AppDelegate.swift in Sources */,
+				ED9A1CC72CD26D7D0003245D /* GameOverScene.swift in Sources */,
 				ED9F16DF2CCA91C500949B40 /* SceneManager.swift in Sources */,
 				ED9F16A62CAE8D3300949B40 /* Enemy.swift in Sources */,
 				ED9F16502C9C43EB00949B40 /* Island.swift in Sources */,
