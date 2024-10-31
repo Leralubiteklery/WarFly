@@ -8,12 +8,15 @@
 import SpriteKit
 import GameplayKit
 import CoreMotion
+import AVFAudio
 
 class GameScene: ParentScene {
     
     fileprivate var player: PlayerPlane!
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size
+    fileprivate var musicPlayer: AVAudioPlayer!
+    
     fileprivate var lives = 3 {
         didSet {
             switch lives {
@@ -37,8 +40,9 @@ class GameScene: ParentScene {
     
     
     override func didMove(to view: SKView) {
-        
+        playMusic()
         self.scene?.isPaused = false
+        musicPlayer.play()
         
         // checking if scene exists
         guard sceneManager.gameScene == nil else { return }
@@ -58,6 +62,8 @@ class GameScene: ParentScene {
         spawnEnemies()
         
         createHUD()
+        
+        playMusic()
     }
     
     fileprivate func createHUD() {
@@ -201,6 +207,14 @@ class GameScene: ParentScene {
         self.addChild(shot)
     }
     
+    func playMusic() {
+        let musicPath = Bundle.main.url(forResource: "backGroundSound", withExtension: "mp3")!
+        musicPlayer = try! AVAudioPlayer(contentsOf: musicPath, fileTypeHint: nil)
+        musicPlayer.play()
+        musicPlayer.numberOfLoops = -1
+        
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in: self)
         let node = self.atPoint(location)
@@ -212,6 +226,7 @@ class GameScene: ParentScene {
             sceneManager.gameScene = self
             self.scene?.isPaused = true
             self.scene!.view?.presentScene(pauseScene, transition: transition)
+            musicPlayer.stop()
         } else {
             playerFire()
         }
@@ -227,6 +242,7 @@ extension GameScene: SKPhysicsContactDelegate {
         explosion?.position = contactPoint
         explosion?.zPosition = 25
         let waitForExplosionAction = SKAction.wait(forDuration: 1.0)
+        let explosionSoundAction = SKAction.playSoundFileNamed("explosionSound", waitForCompletion: true)
         
         let contactCategory: BitMaskCategory = [contact.bodyA.category, contact.bodyB.category]
         switch contactCategory {
@@ -245,6 +261,7 @@ extension GameScene: SKPhysicsContactDelegate {
             
             addChild(explosion!)
             self.run(waitForExplosionAction) { explosion?.removeFromParent() }
+            run(explosionSoundAction)
             
             if lives == 0 {
                 let gameOverScene = GameOverScene(size: self.size)
@@ -276,6 +293,8 @@ extension GameScene: SKPhysicsContactDelegate {
                     player.greenPowerUp()
                 }
             }
+            let powerUpSoundAction = SKAction.playSoundFileNamed("powerUpSound", waitForCompletion: true)
+            run(powerUpSoundAction)
             
         case [.enemy, .shot]: print("enemy vs shot")
             if contact.bodyA.node?.parent != nil {
@@ -286,6 +305,7 @@ extension GameScene: SKPhysicsContactDelegate {
                 self.run(waitForExplosionAction) {
                     explosion?.removeFromParent()
                 }
+                run(explosionSoundAction)
             }
             
         default: preconditionFailure("Unable to detect collision category")

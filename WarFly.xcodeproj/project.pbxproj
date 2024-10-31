@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		ED9A1CC72CD26D7D0003245D /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A1CC62CD26D7D0003245D /* GameOverScene.swift */; };
+		ED9A1CCB2CD371750003245D /* backGroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED9A1CC82CD371750003245D /* backGroundSound.mp3 */; };
+		ED9A1CCC2CD371750003245D /* explosionSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED9A1CC92CD371750003245D /* explosionSound.mp3 */; };
+		ED9A1CCD2CD371750003245D /* powerUpSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED9A1CCA2CD371750003245D /* powerUpSound.mp3 */; };
+		ED9A1CD02CD37F8C0003245D /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A1CCF2CD37F8C0003245D /* GameSettings.swift */; };
 		ED9F16372C9B210200949B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F16362C9B210200949B40 /* AppDelegate.swift */; };
 		ED9F163D2C9B210200949B40 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F163C2C9B210200949B40 /* GameScene.swift */; };
 		ED9F163F2C9B210200949B40 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F163E2C9B210200949B40 /* GameViewController.swift */; };
@@ -47,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		ED9A1CC62CD26D7D0003245D /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		ED9A1CC82CD371750003245D /* backGroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backGroundSound.mp3; sourceTree = "<group>"; };
+		ED9A1CC92CD371750003245D /* explosionSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosionSound.mp3; sourceTree = "<group>"; };
+		ED9A1CCA2CD371750003245D /* powerUpSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = powerUpSound.mp3; sourceTree = "<group>"; };
+		ED9A1CCF2CD37F8C0003245D /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		ED9F16332C9B210200949B40 /* WarFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9F16362C9B210200949B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED9F163C2C9B210200949B40 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -97,6 +105,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED9A1CCE2CD371880003245D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				ED9A1CC82CD371750003245D /* backGroundSound.mp3 */,
+				ED9A1CC92CD371750003245D /* explosionSound.mp3 */,
+				ED9A1CCA2CD371750003245D /* powerUpSound.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		ED9F162A2C9B210200949B40 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +134,7 @@
 		ED9F16352C9B210200949B40 /* WarFly */ = {
 			isa = PBXGroup;
 			children = (
+				ED9A1CCE2CD371880003245D /* Sounds */,
 				ED9F16EA2CCF860C00949B40 /* Particles */,
 				ED9F16D82CC7B4A200949B40 /* Managers */,
 				ED9F16D92CC7B4AD00949B40 /* Scenes */,
@@ -195,6 +214,7 @@
 				ED9F16C12CBE890E00949B40 /* BitMaskCategory.swift */,
 				ED9F16BD2CBD46A800949B40 /* Assets.swift */,
 				ED9F16DE2CCA91C500949B40 /* SceneManager.swift */,
+				ED9A1CCF2CD37F8C0003245D /* GameSettings.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -287,8 +307,11 @@
 				ED9F16562CA1534100949B40 /* PlayerPlane.atlas in Resources */,
 				ED9F16442C9B210300949B40 /* Assets.xcassets in Resources */,
 				ED9F16B02CB6965600949B40 /* BluePowerUp.atlas in Resources */,
+				ED9A1CCC2CD371750003245D /* explosionSound.mp3 in Resources */,
+				ED9A1CCD2CD371750003245D /* powerUpSound.mp3 in Resources */,
 				ED9F16E82CCF85FF00949B40 /* EnemyExplosion.sks in Resources */,
 				ED9F16E92CCF85FF00949B40 /* Assets.xcassets in Resources */,
+				ED9A1CCB2CD371750003245D /* backGroundSound.mp3 in Resources */,
 				ED9F16472C9B210300949B40 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +325,7 @@
 			files = (
 				ED9F163D2C9B210200949B40 /* GameScene.swift in Sources */,
 				ED9F16BA2CBA71AF00949B40 /* YellowShot.swift in Sources */,
+				ED9A1CD02CD37F8C0003245D /* GameSettings.swift in Sources */,
 				ED9F16542CA1517E00949B40 /* PlayerPlane.swift in Sources */,
 				ED9F16582CA2B24D00949B40 /* Protocol GameBackgroindSprotable + Extansion.swift in Sources */,
 				ED9F16522CA0175000949B40 /* Cloud.swift in Sources */,

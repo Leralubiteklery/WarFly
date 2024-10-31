@@ -9,6 +9,7 @@ import SpriteKit
 
 class ParentScene: SKScene {
     let sceneManager = SceneManager.shared
+    let gameSettings = GameSettings()
     var backScene: SKScene?
         
     func setHeader(withName name: String?, andBackground backgroundName: String) {
