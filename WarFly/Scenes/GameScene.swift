@@ -15,7 +15,9 @@ class GameScene: ParentScene {
     fileprivate var player: PlayerPlane!
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size
-    fileprivate var musicPlayer: AVAudioPlayer!
+//    fileprivate var musicPlayer: AVAudioPlayer!
+    
+    var backgroundMusic: SKAudioNode!
     
     fileprivate var lives = 3 {
         didSet {
@@ -40,9 +42,18 @@ class GameScene: ParentScene {
     
     
     override func didMove(to view: SKView) {
-        playMusic()
+        
+        gameSettings.loadGameSettings()
+        if gameSettings.isMusic  && backgroundMusic == nil {
+//            playMusic()
+            if let musicURL = Bundle.main.url(forResource: "backGroundSound", withExtension: "mp3") {
+                backgroundMusic = SKAudioNode(url: musicURL)
+                addChild(backgroundMusic)
+            }
+        }
+        
+        
         self.scene?.isPaused = false
-        musicPlayer.play()
         
         // checking if scene exists
         guard sceneManager.gameScene == nil else { return }
@@ -62,8 +73,6 @@ class GameScene: ParentScene {
         spawnEnemies()
         
         createHUD()
-        
-        playMusic()
     }
     
     fileprivate func createHUD() {
@@ -207,13 +216,13 @@ class GameScene: ParentScene {
         self.addChild(shot)
     }
     
-    func playMusic() {
-        let musicPath = Bundle.main.url(forResource: "backGroundSound", withExtension: "mp3")!
-        musicPlayer = try! AVAudioPlayer(contentsOf: musicPath, fileTypeHint: nil)
-        musicPlayer.play()
-        musicPlayer.numberOfLoops = -1
-        
-    }
+//    func playMusic() {
+//        if let musicPath = Bundle.main.url(forResource: "backGroundSound", withExtension: "mp3") {
+//            musicPlayer = try! AVAudioPlayer(contentsOf: musicPath, fileTypeHint: nil)
+//            musicPlayer.play()
+//            musicPlayer.numberOfLoops = -1
+//        }
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in: self)
@@ -226,7 +235,7 @@ class GameScene: ParentScene {
             sceneManager.gameScene = self
             self.scene?.isPaused = true
             self.scene!.view?.presentScene(pauseScene, transition: transition)
-            musicPlayer.stop()
+//            musicPlayer.stop()
         } else {
             playerFire()
         }
@@ -261,8 +270,9 @@ extension GameScene: SKPhysicsContactDelegate {
             
             addChild(explosion!)
             self.run(waitForExplosionAction) { explosion?.removeFromParent() }
-            run(explosionSoundAction)
-            
+            if gameSettings.isSound {
+                run(explosionSoundAction)
+            }
             if lives == 0 {
                 let gameOverScene = GameOverScene(size: self.size)
                 gameOverScene.scaleMode = .aspectFill
@@ -293,8 +303,10 @@ extension GameScene: SKPhysicsContactDelegate {
                     player.greenPowerUp()
                 }
             }
-            let powerUpSoundAction = SKAction.playSoundFileNamed("powerUpSound", waitForCompletion: true)
-            run(powerUpSoundAction)
+            if gameSettings.isSound {
+                let powerUpSoundAction = SKAction.playSoundFileNamed("powerUpSound", waitForCompletion: true)
+                run(powerUpSoundAction)
+            }
             
         case [.enemy, .shot]: print("enemy vs shot")
             if contact.bodyA.node?.parent != nil {
@@ -305,7 +317,9 @@ extension GameScene: SKPhysicsContactDelegate {
                 self.run(waitForExplosionAction) {
                     explosion?.removeFromParent()
                 }
-                run(explosionSoundAction)
+                if gameSettings.isSound {
+                    run(explosionSoundAction)
+                }
             }
             
         default: preconditionFailure("Unable to detect collision category")
