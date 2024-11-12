@@ -19,6 +19,8 @@ class GameSettings: NSObject {
     
     override init() {
         super.init()
+        
+        loadGameSettings()
     }
     
     func saveGameSettings() {
@@ -27,7 +29,6 @@ class GameSettings: NSObject {
     }
     
     func loadGameSettings() {
-        
         guard ud.value(forKey: musicKey) != nil && ud.value(forKey: soundKey) != nil else { return }
         isMusic = ud.bool(forKey: musicKey)
         isSound = ud.bool(forKey: soundKey)

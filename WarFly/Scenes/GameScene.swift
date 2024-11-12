@@ -15,7 +15,6 @@ class GameScene: ParentScene {
     fileprivate var player: PlayerPlane!
     fileprivate let hud = HUD()
     fileprivate let screenSize = UIScreen.main.bounds.size
-//    fileprivate var musicPlayer: AVAudioPlayer!
     
     var backgroundMusic: SKAudioNode!
     
@@ -44,8 +43,7 @@ class GameScene: ParentScene {
     override func didMove(to view: SKView) {
         
         gameSettings.loadGameSettings()
-        if gameSettings.isMusic  && backgroundMusic == nil {
-//            playMusic()
+        if gameSettings.isMusic && backgroundMusic == nil {
             if let musicURL = Bundle.main.url(forResource: "backGroundSound", withExtension: "mp3") {
                 backgroundMusic = SKAudioNode(url: musicURL)
                 addChild(backgroundMusic)
@@ -216,14 +214,6 @@ class GameScene: ParentScene {
         self.addChild(shot)
     }
     
-//    func playMusic() {
-//        if let musicPath = Bundle.main.url(forResource: "backGroundSound", withExtension: "mp3") {
-//            musicPlayer = try! AVAudioPlayer(contentsOf: musicPath, fileTypeHint: nil)
-//            musicPlayer.play()
-//            musicPlayer.numberOfLoops = -1
-//        }
-//    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in: self)
         let node = self.atPoint(location)
@@ -235,7 +225,6 @@ class GameScene: ParentScene {
             sceneManager.gameScene = self
             self.scene?.isPaused = true
             self.scene!.view?.presentScene(pauseScene, transition: transition)
-//            musicPlayer.stop()
         } else {
             playerFire()
         }
