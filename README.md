@@ -9,7 +9,8 @@ Arcade game written using SpriteKit framework. The main aim of this game is to s
 
 **Sound settings screen**:
 
-![Simulator Screenshot - iPhone 15 - 2024-11-12 at 13 02 48](https://github.com/user-attachments/assets/4f6145c6-c097-49b8-b925-074cd646c0c6
+![IMG_DA87360FFA73-1](https://github.com/user-attachments/assets/3d923517-079f-4d86-8e8d-559bcd5f5ae4)
+
 
 **Best scores creen**:
 
