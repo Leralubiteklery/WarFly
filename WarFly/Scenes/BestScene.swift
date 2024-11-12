@@ -9,9 +9,12 @@ import SpriteKit
 
 class BestScene: ParentScene {
     
-    var ratings = [10, 100, 10000]
+    var ratings: [Int]!
     
     override func didMove(to view: SKView) {
+        
+        gameSettings.loadScores()
+        ratings = gameSettings.highscores
         
         setHeader(withName: "best", andBackground: "header_background")
         
@@ -24,9 +27,8 @@ class BestScene: ParentScene {
             button.label.name = title
             addChild(button)
         }
-        
-        let topRatings = ratings.sorted() { $0 > $1 }.prefix(3)
-        for (index, value) in topRatings.enumerated() {
+
+        for (index, value) in ratings.enumerated() {
             let l = SKLabelNode(text: value.description)
             
             l.fontColor = UIColor(red: 219/255, green: 226/255, blue: 215/255, alpha: 1.0)

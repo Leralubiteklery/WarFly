@@ -263,6 +263,8 @@ extension GameScene: SKPhysicsContactDelegate {
                 run(explosionSoundAction)
             }
             if lives == 0 {
+                gameSettings.currentScore = hud.score
+                gameSettings.saveScores()
                 let gameOverScene = GameOverScene(size: self.size)
                 gameOverScene.scaleMode = .aspectFill
                 let transition = SKTransition.doorsCloseVertical(withDuration: 1.0)
