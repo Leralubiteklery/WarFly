@@ -33,8 +33,8 @@ class BestScene: ParentScene {
             
             l.fontColor = UIColor(red: 219/255, green: 226/255, blue: 215/255, alpha: 1.0)
             l.fontName = "AmericanTypewriter-Bold"
-            l.fontSize = 30
-            l.position = CGPoint(x: self.frame.midX, y: self.frame.midY - CGFloat(index * 60))
+            l.fontSize = 40
+            l.position = CGPoint(x: self.frame.midX, y: self.frame.midY - CGFloat(index * 50))
             addChild(l)
         }
     }
